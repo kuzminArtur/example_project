@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File analyzer</title>
+</head>
+<body>
+    <h1>Псс, парень, загрузи файло</h1>
+    <form method="post" action="{% url 'index' %} " enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Анализировать!">
+    </form>
+</body>
+</html>
